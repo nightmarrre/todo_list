@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To Do</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+</head>
+<style>
+    body {
+        background-color: #FAFAFA;
+        font-family: 'Ubuntu', sans-serif;
+        padding-top: 50px;
+
+    }
+
+    .container {
+        max-width: 1050px;
+        margin: auto;
+        background-color: #eff1f2;
+        -webkit-box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+        box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+        font-size: 32px;
+    }
+
+    h1 {
+        text-align: center;
+        color: #3669bd;
+    }
+
+    .add-task-button {
+        padding: 10px 20px;
+        background-color: #3669bd;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 40px;
+        cursor: pointer;
+        outline: none;
+    }
+
+    .add-task {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icons {
+        padding: 20px;
+        border: None;
+    }
+
+    .back {
+        text-decoration: none;
+        color: black;
+    }
+
+    .limited-length {
+        border-top: 3px solid rgb(226, 226, 226);
+        width: 900px;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .button {
+        border: 1px solid #3669bd;
+        background-color: #FAFAFA;
+        color: #3669bd;
+        padding: 10px;
+        font-size: 14px;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    [name='title'] {
+        font-size: 24px;
+        border: 1px solid #3669bd;
+        border-radius: 5px;
+        padding: 10px;
+        width: 90%;
+    }
+
+    textarea {
+        font-size: 18px;
+        border: 1px solid #3669bd;
+        border-radius: 5px;
+        padding: 10px;
+        width: 90%;
+    }
+
+    label {
+        padding-top: 10px !important;
+        display: block;
+    }
+
+    .delete-buttons {
+        position: relative;
+        text-align: center;
+    }
+
+    .centered {
+        text-align: center;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        {% block content %}
+
+        {% endblock %}
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+{% extends 'main/main.html' %}
+
+{% block content %}
+
+<div>
+    <a class="back" href="{% url 'main:tasks' %}">&#8592; Back</a>
+</div>
+    {% if form.errors %}
+
+    {% endif %}
+    <form action="" method="post" >
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input class="button" type="submit" value="Submit">
+</form>
+
+{% endblock %}
+

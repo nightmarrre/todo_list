@@ -1,0 +1,35 @@
+{% extends 'main/main.html' %}
+
+{% block content %}
+
+<h1> <i class="fas fa-check-square me-1"></i> My ToDo-s</h1>
+<div class="add-task">
+  <a href="{% url 'main:task-create' %}"><input class="add-task-button" type="button" value="ADD TASK"></a>
+</div>
+<hr>
+<table>
+  {% for task in tasks %}
+  <tr>
+    {% if task.complete %}
+      <td class="limited-length"><s>{{task.title}}</s></td>
+    {% else %}
+      <td class="limited-length">{{task.title}}</td>
+    {% endif %}
+
+    <td class="icons" style="padding-right: 30px">
+      <a href="{% url 'main:task-edit' task.id %}">
+      <i class="fas fa-pen" style="color: #54b4d3;"></i></a>
+    </td>
+
+    <td class="icons">
+      <a href="{% url 'main:task-delete' task.id %}">
+      <i class="fas fa-trash-alt" style="color: #dc4c64"></i></a>
+    </td>
+  </tr>
+  {% empty %}
+    <h3 style="text-align: center"> No items in list </h3>
+  {% endfor %}
+</table>
+
+{% endblock %}
+
